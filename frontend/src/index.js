@@ -1,18 +1,12 @@
+// filepath: ai-assistance-frontend/ai-assistance-frontend/src/index.js
 import React from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
 import App from './App';
-import { BrowserRouter } from 'react-router-dom';
-import { AuthProvider } from './AuthContext/AuthContext';
+import './styles/tailwind.css';
 
-const container = document.getElementById('root');
-const root = createRoot(container);
-
-root.render(
-   <BrowserRouter>
-    <AuthProvider>
-      <App />
-    </AuthProvider>
-  </BrowserRouter>
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-
