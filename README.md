@@ -52,6 +52,74 @@ This project uses Tailwind CSS for styling. The styles are defined in the `src/s
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
 
+# AI Assistance Backend
+
+## Overview
+The AI Assistance Backend is a Node.js application that leverages the Google Generative AI API to provide code review functionalities. It allows developers to submit code snippets and receive constructive feedback, suggestions for improvements, and best practices.
+
+## Project Structure
+```
+ai-assistance-backend
+├── src
+│   ├── controllers
+│   │   └── ai.controller.js
+│   ├── routes
+│   │   └── ai.routes.js
+│   ├── services
+│   │   └── ai.service.js
+│   └── app.js
+├── .env
+├── package.json
+└── README.md
+```
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   cd ai-assistance-backend
+   ```
+
+2. Install the dependencies:
+   ```
+   npm install
+   ```
+
+3. Set up your environment variables:
+   - Create a `.env` file in the root directory and add your Google Gemini API key:
+     ```
+     GOOGLE_GEMINI_KEY=your_api_key_here
+     ```
+
+## Usage
+
+1. Start the application:
+   ```
+   npm start
+   ```
+
+2. Send a POST request to the `/get-review` endpoint with the following JSON body:
+   ```json
+   {
+     "code": "your_code_here"
+   }
+   ```
+
+3. The server will respond with a review of the provided code, including suggestions for improvements and best practices.
+
+## API Endpoints
+
+### POST /get-review
+- **Description**: Submits code for review.
+- **Request Body**:
+  - `code`: The code snippet to be reviewed (required).
+- **Response**: A JSON object containing the review feedback.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
+
 ## License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
