@@ -21,7 +21,7 @@ function App() {
     setLoading(true);
     setInput('');
     try {
-      const res = await axios.post('https://ai-assistance-n4u6.onrender.com/api/get-review', {
+      const res = await axios.post('http://localhost:3000/api/get-review', {
         code: userMsg.text,
       }, {
         headers: { 'Content-Type': 'application/json' }
